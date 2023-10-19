@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+</head>
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .formBox{
+        height: 60vh;
+        width: 20vw;
+        background-color: rgb(231, 228, 228);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>
+<body>
+    <div class="formBox">
+        <div style="font-size: 4vh; background-color: rgb(115, 114, 114); width: 100%; height: 6vh; text-align: center;">
+            Update Your Expense
+        </div>
+        <form
+            style=" 
+                    display: flex; 
+                    flex-direction: column;
+                    height: fit-content;
+                    margin-top: 5vh;
+                    height: 40vh;
+                    justify-content: space-evenly;
+                    " 
+            action="/updatedExpense/<%= expense._id %>" method="post">
+            <div>
+                <div style="
+                    font-size: 3vh;
+                    ">Update your Expense Name:</div>
+                <input 
+                    style="
+                            height: 3vh; 
+                            width: 80%;
+                            "
+                type="text" value="<%= expense.expenseName %>" name="expenseName">
+            </div>
+            <div>
+                <div style="
+                            font-size: 3vh;
+                            ">Update your Expense Amount:</div>
+                <input 
+                    style="
+                            height: 3vh; 
+                            width: 80%;
+                            "
+                type="number" value="<%= expense.cost %>" name="expenseAmount">
+            </div>
+            <input type="submit" value="Update">
+        </form>
+    </div>
+</body>
+</html>
