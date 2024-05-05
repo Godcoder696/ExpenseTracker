@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "react-scripts start"
+    "start": "nodemon main.js"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
