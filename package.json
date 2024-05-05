@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "main.js"
+    "start": "react-scripts start"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
